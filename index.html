@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> الوتين للوسائل التعليمية- بادارة المهندسة روان ابراهيم ابراهيم بني عامر </title>
+  <meta name="description" content="الوتين للوسائل التعليمية – تصاميم لوحات ومجسمات تعليمية مبتكرة." />
+  <style>
+    :root {
+      --primary: #0f766e;
+      --secondary: #134e4a;
+      --bg: #f0fdfa;
+      --text: #0f172a;
+      --card: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Cairo", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    header h1 { font-size: 2.5rem; margin-bottom: .5rem; }
+    header p { font-size: 1.1rem; opacity: .95; }
+    nav {
+      background: white;
+      box-shadow: 0 4px 20px rgba(0,0,0,.05);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      list-style: none;
+      padding: .75rem 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+    }
+    section {
+      padding: 4rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: var(--secondary);
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,.06);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,.1);
+    }
+    .card h3 { margin-bottom: .5rem; color: var(--primary); }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .gallery div {
+      background: #ccfbf1;
+      border-radius: 12px;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--secondary);
+      font-weight: 600;
+      
+    }
+  .gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.1);
+}
+    .contact {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      max-width: 700px;
+      margin: auto;
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    .contact p { margin-bottom: 1rem; text-align: center; }
+    footer {
+      background: var(--secondary);
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>الوتين للوسائل التعليمية</h1>
+  <p>تصميم وتنفيذ لوحات ومجسمات تعليمية مبتكرة</p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#about">من نحن</a></li>
+    <li><a href="#services">خدماتنا</a></li>
+    <li><a href="#gallery">أعمالنا</a></li>
+    <li><a href="#contact">تواصل معنا</a></li>
+  </ul>
+</nav>
+
+<section id="about">
+  <h2 class="section-title">من نحن</h2>
+  <p style="text-align:center; max-width:800px; margin:auto;">
+    مؤسسة <strong>الوتين للوسائل التعليمية</strong> متخصصة في تصميم وإنتاج الوسائل التعليمية
+    مثل اللوحات والمجسمات التي تساعد على تبسيط المعلومة وتحفيز التعلم بأسلوب إبداعي وحديث.
+  </p>
+</section>
+
+<section id="services">
+  <h2 class="section-title">خدماتنا</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>لوحات تعليمية</h3>
+      <p>تصميم لوحات تعليمية جذابة تناسب جميع المراحل الدراسية.</p>
+    </div>
+    <div class="card">
+      <h3>مجسمات تعليمية</h3>
+      <p>تنفيذ مجسمات ثلاثية الأبعاد لشرح المفاهيم العلمية.</p>
+    </div>
+    <div class="card">
+      <h3>تصاميم حسب الطلب</h3>
+      <p>تنفيذ وسائل تعليمية مخصصة حسب احتياج المدرسة أو المعلم.</p>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2 class="section-title">نماذج من أعمالنا</h2>
+  <div class="gallery">
+    <img src="images/472790162_122186981882058694_5389363386767610608_n.jpg" alt="لوحة تعليمية">
+    <img src="images/558195670_122227966778058694_594814024538029523_n.jpg" alt="مجسم تعليمي">
+    <img src="images/494442621_122204412650058694_2921988696171878971_n.jpg" alt="وسيلة تعليمية">
+    <img src="images/473688169_122187564392058694_8535351441821110119_n.jpg" alt="عمل تعليمي">
+    <img src="images/584196764_122233026110058694_3516190705613581666_n.jpg" alt="عمل تعليمي">
+    <img src="images/585495414_122233124282058694_249679848844600382_n.jpg" alt="عمل تعليمي">
+    <img src="images/585410132_122233025414058694_1641422862823400390_n.jpg" alt="عمل تعليمي">
+    <img src="images/573530433_122230849370058694_7259925428155410037_n.jpg" alt="عمل تعليمي">
+    <img src="images/593468567_122234983652058694_8096343509554672151_n.jpg" alt="عمل تعليمي">
+    <img src="images/594486217_122234766194058694_8987734713253686549_n.jpg" alt="عمل تعليمي">
+    <img src="images/589327930_122234137826058694_2445070956180279613_n.jpg" alt="عمل تعليمي">
+    <img src="images/594967135_122234765816058694_1477744652577037942_n.jpg" alt="عمل تعليمي">
+    <img src="images/587775048_122233732598058694_8549421487490352862_n.jpg" alt="عمل تعليمي">
+    <img src="images/495271846_122205809138058694_3165128581147462494_n.jpg" alt="عمل تعليمي">
+    <img src="images/481239842_122193764036058694_5170265709666662392_n.jpg" alt="عمل تعليمي">
+    <img src="images/481446711_122193764078058694_240473481691388336_n.jpg" alt="عمل تعليمي">
+    <img src="images/482317574_122193764126058694_5939790735745974260_n.jpg" alt="عمل تعليمي">
+
+    <img src="images/481265325_122193764198058694_1541873275674249541_n.jpg" alt="عمل تعليمي">
+    <img src="images/470193082_122183292530058694_4770553938663758779_n.jpg" alt="عمل تعليمي">
+    
+    <img src="images/470186467_122183444300058694_2237498427141740405_n.jpg" alt="عمل تعليمي">
+    <img src="images/470222091_122183198336058694_9103470735963564919_n.jpg" alt="عمل تعليمي">
+    <img src="images/472698487_122186279144058694_1620998460039139790_n.jpg" alt="عمل تعليمي">
+    <img src="images/472573035_122186278592058694_1298544992076774122_n.jpg" alt="عمل تعليمي">
+    <img src="images/470237063_122183224880058694_3830843785696941908_n.jpg" alt="عمل تعليمي">
+    <img src="images/470222091_122183198336058694_9103470735963564919_n.jpg" alt="عمل تعليمي">
+     <img src="images/470142339_122183238176058694_8925980951381938013_n.jpg" alt="عمل تعليمي">
+     <img src="images/469958645_122182851758058694_9199740412581969613_n.jpg" alt="عمل تعليمي">
+     <img src="images/469959363_122182855862058694_8314141587107452428_n.jpg" alt="عمل تعليمي">
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">تواصل معنا</h2>
+  <div class="contact">
+    <p>📞 الهاتف: 0789119926</p>
+    <p>📧 البريد الإلكتروني: rawanbaniamer3@gmail.com</p>
+    <p>📍الموقع:الاردن-اربد-لواء الكوره -كفرالماء</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 الوتين للوسائل التعليمية – جميع الحقوق محفوظة</p>
+</footer>
+
+</body>
+</html>
