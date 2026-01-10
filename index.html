@@ -124,23 +124,6 @@
       padding: 2rem 1rem;
       margin-top: 3rem;
     }
-    .header-photo {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 110px;
-  height: 110px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid white;
-  box-shadow: 0 8px 25px rgba(0,0,0,.25);
-}
-header {
-  position: relative;
-}
-    header {
-  position: relative;
-}
 
 .header-profile {
   position: absolute;
@@ -227,6 +210,71 @@ header {
   }
 
 }
+    /* ===== ترويسة احترافية ومتجاوبة ===== */
+header {
+  background: linear-gradient(135deg, #22c1c3, #0f766e, #134e4a);
+  color: white;
+  padding: 5rem 1rem 3rem;
+  text-align: center;
+  position: relative;
+}
+
+/* الصورة + الاسم */
+.header-profile {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-align: center;
+}
+
+.header-profile img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 6px 20px rgba(0,0,0,.25);
+}
+
+.header-profile span {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: white;
+}
+
+/* ===== الهاتف ===== */
+@media (max-width: 768px) {
+
+  header {
+    padding-top: 9rem;
+  }
+
+  .header-profile {
+    right: 50%;
+    transform: translateX(50%);
+    top: 15px;
+  }
+
+  .header-profile img {
+    width: 85px;
+    height: 85px;
+  }
+
+  .header-profile span {
+    font-size: 0.75rem;
+  }
+
+  header h1 {
+    font-size: 1.7rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+}
+
 
   </style>
 </head>
@@ -240,6 +288,7 @@ header {
   <h1>الوتين للوسائل التعليمية</h1>
   <p>تصميم وتنفيذ لوحات ومجسمات تعليمية مبتكرة</p>
 </header>
+
 
 <nav>
   <ul>
