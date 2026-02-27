@@ -200,64 +200,22 @@ body::before {
       header h1 { font-size: 1.7rem; }
       header p { font-size: 1rem; }
       .gallery img { height: 160px; }
-    }
- /* الحاوية */
-.ramadan-decoration {
-  position: fixed;
-  top: 40px;
-  left: 40px;
-  width: 220px;
-  height: 220px;
-  z-index: 999;
-  pointer-events: none;
+ 
+
+header {
+  position: relative;
 }
 
-/* الهلال */
-.crescent {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  box-shadow: -30px 0 0 0 #D4AF37;
-  position: absolute;
-}
-
-/* الفانوس الأساسي */
-.lantern {
-  width: 50px;
-  height: 80px;
-  background: linear-gradient(#FFD700, #E6B800);
-  border-radius: 10px;
-  position: absolute;
-  box-shadow: 0 0 25px rgba(255,215,0,0.6);
-}
-
-/* فانوس متدلي */
-.hanging {
-  top: 30px;
-  left: 90px;
-  animation: swing 4s ease-in-out infinite;
-}
-
-.hanging::before {
-  content: "";
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  width: 2px;
-  height: 30px;
-  background: #D4AF37;
-  transform: translateX(-50%);
-}
-/* حاوية الزخرفة داخل الهيدر */
+/* الحاوية */
 .ramadan-wrapper {
   position: absolute;
   left: 30px;
   top: 40px;
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
 }
 
-/* الهلال */
+/* الهلال (كما هو) */
 .crescent {
   width: 150px;
   height: 150px;
@@ -267,49 +225,39 @@ body::before {
   top: 10px;
 }
 
-/* الفانوس */
-.lantern {
-  width: 65px;
-  height: 90px;
-  background: linear-gradient(#FFD700, #E6B800);
-  border-radius: 12px;
+/* الفانوس الحقيقي */
+.lantern-hanging {
   position: absolute;
-  left: 55px;
-  top: 35px;
-  box-shadow: 0 0 25px rgba(255,215,0,0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 5px;
+  top: 10px;
+  left: 80px;
+  transform-origin: top center;
   animation: swing 4s ease-in-out infinite;
 }
 
-/* النص داخل الفانوس */
-.lantern span {
-  font-size: 13px;
-  font-weight: bold;
-  color: #4B3FCF;
-  line-height: 1.2;
+/* صورة الفانوس */
+.lantern-hanging img {
+  width: 70px;
+  height: auto;
+  filter: drop-shadow(0 0 20px rgba(255,215,0,0.7));
 }
 
 /* خيط التعليق */
-.lantern::before {
+.lantern-hanging::before {
   content: "";
   position: absolute;
-  top: -30px;
+  top: -40px;
   left: 50%;
   width: 2px;
-  height: 30px;
+  height: 40px;
   background: #D4AF37;
   transform: translateX(-50%);
 }
 
 /* حركة التأرجح */
 @keyframes swing {
-  0% { transform: rotate(4deg); }
-  50% { transform: rotate(-4deg); }
-  100% { transform: rotate(4deg); }
+  0% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  100% { transform: rotate(5deg); }
 }
 
 /* موبايل */
@@ -345,8 +293,8 @@ body::before {
 <div class="ramadan-wrapper">
   <div class="crescent"></div>
 
-  <div class="lantern hanging">
-    <span>رمضان<br>كريم</span>
+  <div class="lantern-hanging">
+    <img src="images/lantern.png" alt="رمضان كريم">
   </div>
 </div>
 <nav>
