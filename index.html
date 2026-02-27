@@ -186,7 +186,8 @@ body::before {
 }
 
     @media (max-width: 768px) {
-      header { padding-top: 9rem; }
+      header { padding-top: 9rem;
+               position: relative;}
       .header-profile {
         right: 50%;
         transform: translateX(50%);
@@ -201,6 +202,18 @@ body::before {
       header p { font-size: 1rem; }
       .gallery img { height: 160px; }
  
+@media (max-width: 768px) {
+  header { padding-top: 9rem; }
+  .header-profile img {
+    width: 85px;
+    height: 85px;
+  }
+  .gallery img { height: 160px; }
+}
+
+/* ========================= */
+/* كود الهلال والفانوس */
+/* ========================= */
 
 /* الحاوية */
 .ramadan-wrapper {
@@ -226,7 +239,7 @@ body::before {
 /* الفانوس */
 .lantern-hanging {
   position: absolute;
-  width: 28px;   /* أصغر بوضوح من صورة المهندسة */
+  width: 24px;   /* أصغر من صورة المهندسة بوضوح */
   top: 65px;
   left: 70px;
   animation: moveLantern 6s linear infinite;
@@ -237,7 +250,7 @@ body::before {
   height: auto;
 }
 
-/* حركة الفانوس على الهلال */
+/* الحركة */
 @keyframes moveLantern {
   0%   { transform: rotate(-40deg) translateX(70px) rotate(40deg); }
   50%  { transform: rotate(40deg) translateX(70px) rotate(-40deg); }
