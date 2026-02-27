@@ -248,26 +248,76 @@ body::before {
   background: #D4AF37;
   transform: translateX(-50%);
 }
+/* حاوية الزخرفة داخل الهيدر */
+.ramadan-wrapper {
+  position: absolute;
+  left: 30px;
+  top: 40px;
+  width: 180px;
+  height: 180px;
+}
 
-/* فانوس واقف */
-.standing {
-  bottom: 20px;
-  left: 130px;
+/* الهلال */
+.crescent {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: -25px 0 0 0 #D4AF37;
+  position: absolute;
+  top: 10px;
+}
+
+/* الفانوس */
+.lantern {
+  width: 65px;
+  height: 90px;
+  background: linear-gradient(#FFD700, #E6B800);
+  border-radius: 12px;
+  position: absolute;
+  left: 55px;
+  top: 35px;
+  box-shadow: 0 0 25px rgba(255,215,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
+  animation: swing 4s ease-in-out infinite;
+}
+
+/* النص داخل الفانوس */
+.lantern span {
+  font-size: 13px;
+  font-weight: bold;
+  color: #4B3FCF;
+  line-height: 1.2;
+}
+
+/* خيط التعليق */
+.lantern::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  width: 2px;
+  height: 30px;
+  background: #D4AF37;
+  transform: translateX(-50%);
 }
 
 /* حركة التأرجح */
 @keyframes swing {
-  0% { transform: rotate(5deg); }
-  50% { transform: rotate(-5deg); }
-  100% { transform: rotate(5deg); }
+  0% { transform: rotate(4deg); }
+  50% { transform: rotate(-4deg); }
+  100% { transform: rotate(4deg); }
 }
 
 /* موبايل */
 @media (max-width: 768px) {
-  .ramadan-decoration {
-    transform: scale(0.7);
-    top: 20px;
+  .ramadan-wrapper {
     left: 10px;
+    top: 20px;
+    transform: scale(0.7);
   }
 }
   </style>
@@ -292,10 +342,12 @@ body::before {
     </div>
   </div>
 </header>
-<div class="ramadan-decoration">
+<div class="ramadan-wrapper">
   <div class="crescent"></div>
-  <div class="lantern hanging"></div>
-  <div class="lantern standing"></div>
+
+  <div class="lantern hanging">
+    <span>رمضان<br>كريم</span>
+  </div>
 </div>
 <nav>
   <ul>
