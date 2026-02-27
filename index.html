@@ -210,12 +210,12 @@ header {
 .ramadan-wrapper {
   position: absolute;
   left: 30px;
-  top: 40px;
-  width: 200px;
-  height: 200px;
+  top: 30px;
+  width: 180px;
+  height: 180px;
 }
 
-/* الهلال (كما هو) */
+/* الهلال */
 .crescent {
   width: 150px;
   height: 150px;
@@ -225,20 +225,22 @@ header {
   top: 10px;
 }
 
-/* الفانوس الحقيقي */
+/* الفانوس */
 .lantern-hanging {
   position: absolute;
-  top: 10px;
-  left: 80px;
+  top: 0;
+  left: 85px;
+  width: 70px;              /* مهم جداً */
   transform-origin: top center;
-  animation: swing 4s ease-in-out infinite;
+  animation: swing 3s ease-in-out infinite;
 }
 
-/* صورة الفانوس */
+/* الصورة */
 .lantern-hanging img {
-  width: 70px;
+  width: 100%;              /* يخليه ياخذ حجم الحاوية */
   height: auto;
-  filter: drop-shadow(0 0 20px rgba(255,215,0,0.7));
+  display: block;
+  filter: drop-shadow(0 0 20px rgba(255,215,0,0.8));
 }
 
 /* خيط التعليق */
@@ -253,11 +255,11 @@ header {
   transform: translateX(-50%);
 }
 
-/* حركة التأرجح */
+/* حركة التأرجح الصحيحة */
 @keyframes swing {
-  0% { transform: rotate(5deg); }
-  50% { transform: rotate(-5deg); }
-  100% { transform: rotate(5deg); }
+  0%   { transform: rotate(6deg); }
+  50%  { transform: rotate(-6deg); }
+  100% { transform: rotate(6deg); }
 }
 
 /* موبايل */
@@ -294,7 +296,7 @@ header {
   <div class="crescent"></div>
 
   <div class="lantern-hanging">
-    <img src="images/lantern.png" alt="رمضان كريم">
+    <img src="images/lantern.png" alt="فانوس رمضان">
   </div>
 </div>
 <nav>
