@@ -209,30 +209,32 @@ header {
 /* الحاوية */
 .ramadan-wrapper {
   position: absolute;
-  left: 30px;
-  top: 30px;
-  width: 180px;
-  height: 180px;
+  left: 40px;
+  top: 20px;
+  width: 200px;
+  height: 220px;
+  pointer-events: none;
 }
 
 /* الهلال */
 .crescent {
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  box-shadow: -25px 0 0 0 #D4AF37;
+  box-shadow: -30px 0 0 0 #D4AF37;
   position: absolute;
-  top: 10px;
+  top: 40px;
+  left: 20px;
 }
-
 /* الفانوس */
 .lantern-hanging {
   position: absolute;
-  top: 0;
-  left: 85px;
-  width: 70px;              /* مهم جداً */
+  top: 60px;
+  left: 90px;
+  width: 60px;
   transform-origin: top center;
-  animation: swing 3s ease-in-out infinite;
+  animation: swing 2.5s ease-in-out infinite;
+  z-index: 5;
 }
 
 /* الصورة */
