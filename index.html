@@ -47,6 +47,8 @@ body::before {
   background: linear-gradient(135deg, #6C63FF, #A78BFA, #F472B6);
   color: white;
   padding: 4rem 1rem;
+      position: relative;
+  overflow: hidden;
 }
 
 .header-content {
@@ -187,7 +189,8 @@ body::before {
 
     @media (max-width: 768px) {
       header { padding-top: 9rem;
-               position: relative;}
+                 position: relative;
+  overflow: hidden;}
       .header-profile {
         right: 50%;
         transform: translateX(50%);
@@ -239,15 +242,15 @@ body::before {
 /* الفانوس */
 .lantern-hanging {
   position: absolute;
-  width: 24px;   /* أصغر من صورة المهندسة بوضوح */
-  top: 65px;
-  left: 70px;
+  width: 18px;   /* تصغير واضح */
+  top: 55px;
+  left: 75px;
   animation: moveLantern 6s linear infinite;
 }
 
 .lantern-hanging img {
   width: 100%;
-  height: auto;
+  transform: scale(0.6);   /* يقلل حجم الصورة نفسها */
 }
 
 /* الحركة */
