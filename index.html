@@ -201,6 +201,52 @@ body::before {
       header p { font-size: 1rem; }
       .gallery img { height: 160px; }
     }
+    /* فانوس رمضان */
+.ramadan-lantern {
+  position: fixed;
+  top: 80px;
+  left: 40px;
+  z-index: 999;
+  animation: swing 4s ease-in-out infinite;
+}
+
+.ramadan-lantern img {
+  width: 90px;
+  filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.8));
+}
+
+/* حركة التأرجح */
+@keyframes swing {
+  0% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  100% { transform: rotate(5deg); }
+}
+
+/* تأثير توهج ناعم */
+.ramadan-lantern::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, rgba(255,223,120,0.6) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* موبايل */
+@media (max-width: 768px) {
+  .ramadan-lantern {
+    top: 60px;
+    left: 15px;
+  }
+
+  .ramadan-lantern img {
+    width: 65px;
+  }
+}
   </style>
   
   <!-- Google AdSense (مرة واحدة فقط) -->
@@ -223,6 +269,9 @@ body::before {
     </div>
   </div>
 </header>
+  <div class="ramadan-lantern">
+  <img src="https://cdn-icons-png.flaticon.com/512/2331/2331970.png" alt="فانوس رمضان">
+</div>
 <nav>
   <ul>
     <li><a href="#about">من نحن</a></li>
