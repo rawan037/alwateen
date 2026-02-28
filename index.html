@@ -53,7 +53,7 @@ body::before {
 .header-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+justify-content: center;
   max-width: 1200px;
   margin: auto;
   gap: 2rem;
@@ -61,7 +61,18 @@ body::before {
 }
 
 .header-text {
-  flex: 1;
+  text-align: center;
+  width: 100%;
+}
+
+.header-text h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.header-text p {
+  font-size: 1.2rem;
+  margin-top: 10px;
 }
 
 .header-profile {
