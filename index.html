@@ -75,6 +75,8 @@ body::before {
   border-radius: 50%;
   border: 5px solid white;
   box-shadow: 0 10px 25px rgba(0,0,0,.25);
+  position: relative;
+  z-index: 5;
 }
 
 .header-profile span {
@@ -187,12 +189,12 @@ body::before {
 }
 /* الحاوية */
 .ramadan-decoration {
-  position: fixed;
-  top: 40px;
-  left: 40px;
-  width: 220px;
-  height: 220px;
-  z-index: 999;
+  position: absolute;
+  top: 20px;
+  right: 20px;   /* بدلاً من left عشان ما يلمس صورة البروفايل */
+  width: 180px;
+  height: 180px;
+  z-index: 1;     /* أقل من الصورة */
   pointer-events: none;
 }
 
@@ -249,9 +251,10 @@ body::before {
 /* موبايل */
 @media (max-width: 768px) {
   .ramadan-decoration {
-    transform: scale(0.7);
-    top: 20px;
-    left: 10px;
+    top: 10px;
+    right: 10px;
+    width: 120px;
+    height: 120px;
   }
 }
   </style>
